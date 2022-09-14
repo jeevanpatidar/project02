@@ -8,6 +8,7 @@ router.get('/test', function(req, res){
     res.status(200).send({status: true, message: "test api working fine"})
 })
 
-
+router.post('/functionup/colleges', CollegeController.createCollege)
+router.post('/functionup/colleges',InternController.CreateIntern)
 
 module.exports = router;
