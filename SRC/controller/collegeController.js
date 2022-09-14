@@ -1,5 +1,5 @@
 
-const CollegeModel = require('../model/collegeModel')
+const CollegeModel = require('../model/CollegeModel')
 
 
 
@@ -55,6 +55,5 @@ const createCollege = async function(req, res){
 
 
 module.exports.createCollege = createCollege
-
 
 

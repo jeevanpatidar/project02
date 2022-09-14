@@ -1,6 +1,6 @@
 
-const CollegeModel = require("../Model/collegeModel")
-const internModel = require('../Model/internModel')
+const CollegeModel = require("../Model/CollegeModel")
+const internModel = require('../Model/InternModel')
 
 let checkValid = function (value) {
     if (typeof value == "undefined" || typeof value == "number" || value.length == 0 || typeof value == null) {

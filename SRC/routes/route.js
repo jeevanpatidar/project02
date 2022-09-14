@@ -9,6 +9,9 @@ router.get('/test', function(req, res){
 })
 
 router.post('/functionup/colleges', CollegeController.createCollege)
-router.post('/functionup/colleges',InternController.CreateIntern)
+
+router.post('/functionup/interns', InternController.CreateIntern)
+
+
 
 module.exports = router;
