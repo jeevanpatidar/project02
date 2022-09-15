@@ -21,8 +21,7 @@ const CreateIntern = async function (req, res) {
             return res.status(400).send({ status: false, msg: "Please fill the Mandatory Fields." });
 
         if (!checkValid(name)) return res.status(400).send({ status: false, message: "Please Provide valid Input" })
-        if (!(/^[A-Za-z]+$\b/).test(name)) return res.status(400).send({ status: false, msg: "Please Use Correct Characters in name" })
-
+        
 
 
         if (!checkValid(email)) return res.status(400).send({ status: false, message: "Spaces aren't Allowed." })
@@ -39,8 +38,8 @@ const CreateIntern = async function (req, res) {
 
         let collegeId = CollageName._id
         req.body.collegeId = collegeId
-
         delete req.body.CollageName
+        
         let createIntern = await internModel.create(data)
         res.status(201).send({ status: true, msg: createIntern })
 
